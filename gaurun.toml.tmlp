@@ -1,0 +1,30 @@
+[core]
+port = "1056"
+#port = "unix:/tmp/gaurun.sock"
+workers = 8
+queues = 8192
+notification_max = 100
+
+[android]
+apikey = "${GCM_API_KEY}"
+enabled = true
+timeout = 5 # sec
+keepalive_timeout = 30
+keepalive_conns = 4
+retry_max = 1
+
+[ios]
+pem_cert_path = "${PATH_TO_IOS_CERT_PATH}"
+pem_key_path = "${PATH_TO_IOS_PRIVATE_KEY_PATH}"
+sandbox = false
+enabled = true
+timeout = 5
+keepalive_timeout = 30
+keepalive_conns = 6
+retry_max = 1
+topic = "${IOS_TOPIC_NAME}"
+
+[log]
+access_log = "stdout"
+error_log = "stderr"
+level = "error"

@@ -1,0 +1,3 @@
+[submodule "gaurun"]
+	path = gaurun
+	url = git@github.com:mercari/gaurun.git
